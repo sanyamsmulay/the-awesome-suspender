@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128" height="128" version="1.1" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect x="4" y="4" width="120" height="120" rx="16" ry="16" fill="#4CAF50"/>
+  
+  <!-- Tab with suspenders -->
+  <g transform="translate(14,24)">
+    <!-- Tab -->
+    <rect x="10" y="10" width="80" height="60" rx="8" ry="8" fill="white" stroke="#333" stroke-width="4"/>
+    
+    <!-- Suspenders -->
+    <path d="m30,70 v20" stroke="#ff6b6b" stroke-width="6" stroke-linecap="round"/>
+    <path d="m70,70 v20" stroke="#ff6b6b" stroke-width="6" stroke-linecap="round"/>
+    <path d="m20,80 h20" stroke="#ff6b6b" stroke-width="6" stroke-linecap="round"/>
+    <path d="m60,80 h20" stroke="#ff6b6b" stroke-width="6" stroke-linecap="round"/>
+    
+    <!-- Sleeping face -->
+    <g transform="translate(0,5)">
+      <path d="m35,35 c5,-3 10,-3 15,0" stroke="#333" stroke-width="3" fill="none"/>
+      <path d="m50,35 c5,-3 10,-3 15,0" stroke="#333" stroke-width="3" fill="none"/>
+      <circle cx="50" cy="42" r="3" fill="#333"/>
+    </g>
+  </g>
+</svg>

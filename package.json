@@ -1,0 +1,35 @@
+{
+  "name": "the-awesome-suspender",
+  "version": "1.0.0",
+  "description": "A modern, privacy-focused Chrome extension that automatically suspends inactive tabs",
+  "scripts": {
+    "build": "webpack --mode production",
+    "build-dev": "webpack --mode development",
+    "dev": "webpack --mode development --watch",
+    "test": "jest",
+    "lint": "eslint src",
+    "generate-icons": "node scripts/generate-icons.js"
+  },
+  "keywords": [
+    "chrome-extension",
+    "tab-suspender",
+    "memory-saver"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.22.0",
+    "@babel/preset-env": "^7.22.0",
+    "@types/chrome": "^0.0.240",
+    "@types/jest": "^29.5.2",
+    "babel-loader": "^9.1.2",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.8.1",
+    "eslint": "^8.42.0",
+    "jest": "^29.5.0",
+    "sharp": "^0.32.1",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.85.0",
+    "webpack-cli": "^5.1.1"
+  }
+}

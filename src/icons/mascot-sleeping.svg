@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" version="1.1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(0,-97)">
+    <!-- Tab body -->
+    <rect x="20" y="137" width="160" height="120" rx="10" ry="10" fill="#e0e0e0" stroke="#666" stroke-width="4"/>
+    
+    <!-- Suspenders -->
+    <path d="m60,257 v30" stroke="#ff6b6b" stroke-width="8" stroke-linecap="round"/>
+    <path d="m140,257 v30" stroke="#ff6b6b" stroke-width="8" stroke-linecap="round"/>
+    <path d="m40,277 h40" stroke="#ff6b6b" stroke-width="8" stroke-linecap="round"/>
+    <path d="m120,277 h40" stroke="#ff6b6b" stroke-width="8" stroke-linecap="round"/>
+    
+    <!-- Sleeping face -->
+    <g transform="translate(0,10)">
+      <!-- Closed eyes -->
+      <path d="m70,187 c10,-5 20,-5 30,0" stroke="#666" stroke-width="4" fill="none"/>
+      <path d="m100,187 c10,-5 20,-5 30,0" stroke="#666" stroke-width="4" fill="none"/>
+      
+      <!-- Sleeping Z's -->
+      <text x="140" y="160" font-family="Arial" font-size="24" fill="#666">Z</text>
+      <text x="155" y="145" font-family="Arial" font-size="18" fill="#666">z</text>
+      <text x="165" y="130" font-family="Arial" font-size="14" fill="#666">z</text>
+      
+      <!-- Nose -->
+      <circle cx="100" cy="197" r="5" fill="#666"/>
+    </g>
+  </g>
+</svg>
