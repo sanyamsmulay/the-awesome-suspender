@@ -1,6 +1,14 @@
 # The Awesome Suspender
 
-A modern, privacy-focused Chrome extension that automatically suspends inactive tabs to save memory and CPU. Built with Manifest V3.
+A modern Chrome extension that automatically suspends inactive tabs to save memory and CPU usage. Built with privacy and performance in mind, this extension helps manage browser resources effectively while ensuring user data remains secure.
+
+## Background
+
+This extension is an open-source successor to:
+- **The Great Suspender** - A popular tab suspension extension that was unfortunately compromised when sold to a third party who inserted problematic code.
+- **The Marvellous Suspender** - A trusted alternative that reached end-of-life as Chrome transitions to Manifest V3.
+
+The Awesome Suspender is built from the ground up using Manifest V3, incorporating the best features of its predecessors while maintaining a strong focus on security, privacy, and code transparency.
 
 ## Features
 

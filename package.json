@@ -1,6 +1,6 @@
 {
   "name": "the-awesome-suspender",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A modern, privacy-focused Chrome extension that automatically suspends inactive tabs",
   "scripts": {
     "build": "webpack --mode production",

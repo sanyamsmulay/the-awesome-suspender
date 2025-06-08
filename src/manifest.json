@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "The Awesome Suspender",
-  "version": "1.0.0",
-  "description": "A modern, privacy-focused Chrome extension that automatically suspends inactive tabs to save memory and CPU",
+  "version": "0.0.1",
+  "description": "A modern, privacy-focused Chrome extension that automatically suspends inactive tabs to save memory and CPU. An open-source successor to The Great Suspender and The Marvellous Suspender.",
   "permissions": [
     "tabs",
     "sessions",
