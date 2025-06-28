@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', async () => {
-  const form = document.getElementById('settings-form');
-  const saveMessage = document.querySelector('.save-message');
+  // Tab navigation
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const tabContents = document.querySelectorAll('.tab-content');
 
   // Load current settings
   const loadSettings = async () => {
@@ -66,22 +67,43 @@ document.addEventListener('DOMContentLoaded', async () => {
     chrome.runtime.sendMessage({ action: 'settingsUpdated' });
   };
 
-  // Load initial settings
-  await loadSettings();
+  // Handle tab navigation
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute('href').substring(1);
 
-  // Handle form submission
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    await saveSettings();
+      // Update active states
+      navLinks.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+
+      // Show/hide tab content
+      tabContents.forEach(content => {
+        if (content.id === targetId) {
+          content.classList.add('active');
+        } else {
+          content.classList.remove('active');
+        }
+      });
+    });
   });
 
-  // Handle theme changes
-  document.getElementById('theme').addEventListener('change', (e) => {
-    const theme = e.target.value;
-    if (theme === 'system') {
-      document.documentElement.removeAttribute('data-theme');
-    } else {
-      document.documentElement.setAttribute('data-theme', theme);
-    }
-  });
+  // Handle Import Session button
+  const importButton = document.querySelector('.session-actions .action-button');
+  if (importButton) {
+    importButton.addEventListener('click', () => {
+      // TODO: Implement session import functionality
+      console.log('Import session clicked');
+    });
+  }
+
+  // Handle Migrate Tabs button
+  const migrateButton = document.querySelector('.migration-section .action-button');
+  if (migrateButton) {
+    migrateButton.addEventListener('click', () => {
+      const extensionId = document.querySelector('.input-group input').value;
+      // TODO: Implement tab migration functionality
+      console.log('Migrate tabs clicked with extension ID:', extensionId);
+    });
+  }
 });
