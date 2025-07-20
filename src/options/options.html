@@ -233,6 +233,134 @@
       display: block;
       opacity: 1;
     }
+
+    .session-item.current {
+      position: relative;
+    }
+
+    .windows-list {
+      display: none;
+      margin-left: 1.5rem;
+      padding: 0.25rem 0;
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: -0.5rem;
+      padding-top: 1rem;
+      background: var(--bg-color);
+    }
+
+    .windows-list.expanded {
+      display: block;
+    }
+
+    .window-item {
+      margin-bottom: 0.5rem;
+    }
+
+    .window-header {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      justify-content: space-between;
+    }
+
+    .window-header:hover {
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .window-info {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .window-number {
+      opacity: 0.5;
+      font-size: 0.9em;
+      min-width: 2.5em;
+      text-align: right;
+      margin-right: 1rem;
+      display: inline-block;
+    }
+
+    .window-stats {
+      opacity: 0.7;
+      font-size: 0.9em;
+    }
+
+    .tabs-list {
+      display: none;
+      margin-left: 1.5rem;
+      margin-top: 0.25rem;
+      padding: 0.25rem 0;
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .tabs-list.expanded {
+      display: block;
+    }
+
+    .tab-item {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem;
+      border-radius: 4px;
+      margin: 0.25rem 0;
+      transition: background-color 0.2s;
+    }
+
+    .tab-item:hover {
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .tab-favicon {
+      width: 16px;
+      height: 16px;
+      margin-right: 0.5rem;
+    }
+
+    .tab-title {
+      flex: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      opacity: 0.9;
+    }
+
+    .tab-number {
+      opacity: 0.5;
+      font-size: 0.9em;
+      min-width: 2.5em;
+      text-align: right;
+      margin-right: 1rem;
+      display: inline-block;
+    }
+
+    .tab-actions {
+      display: flex;
+      gap: 0.5rem;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .tab-item:hover .tab-actions {
+      opacity: 1;
+    }
+
+    .tab-action {
+      padding: 0.25rem;
+      border-radius: 3px;
+      cursor: pointer;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+
+    .tab-action:hover {
+      opacity: 1;
+      background: rgba(255, 255, 255, 0.1);
+    }
   </style>
 </head>
 <body>
@@ -347,13 +475,16 @@
     </div>
 
     <div id="session-management" class="tab-content active">
-      <h2>Current session:</h2>
-      <div class="session-item current">
-        <span class="session-info">28 Jun 2025 3:11pm</span>
-        <span class="session-stats">(15 windows, 356 tabs)</span>
+      <h2>Current Session State</h2>
+      <div id="tab-summary" class="session-item current">
+        <span class="session-info">Loading...</span>
+        <span class="session-stats"></span>
+      </div>
+      <div id="windows-list" class="windows-list">
+        <!-- Windows will be dynamically inserted here -->
       </div>
 
-      <h2>Recent sessions:</h2>
+      <h2>Recent Sessions:</h2>
       <div class="session-list">
         <div class="session-item">
           <span class="session-info">25 Jun 2025 10:35pm</span>
@@ -373,7 +504,7 @@
         </div>
       </div>
 
-      <h2>Saved sessions:</h2>
+      <h2>Saved Sessions:</h2>
       <div class="session-list">
         <div class="session-item">
           <span class="session-info">27.Jun.2024</span>
